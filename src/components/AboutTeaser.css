@@ -1,0 +1,54 @@
+/* src/components/AboutTeaser.css */
+
+.about-teaser {
+  padding: 4rem 1rem;
+  background-color: var(--color-bg);
+  color: var(--color-text-paragraph);
+}
+
+.about-teaser-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .about-teaser-content {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.about-avatar {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.about-text {
+  max-width: 600px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .about-text {
+    text-align: left;
+  }
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--color-text-headline);
+}
+
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+}

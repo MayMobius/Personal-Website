@@ -1,0 +1,83 @@
+/* src/components/HeroSection.css */
+
+.hero-section {
+  /* Full screen */
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Background */
+  background-color: var(--color-bg);
+  /* 如果有背景图或渐变，可以在这里替换或叠加 */
+  /* background-image: url('../assets/hero-bg.jpg'); */
+  /* background-size: cover; */
+  /* background-position: center; */
+
+  /* 确保内容在背景上可见 */
+  color: var(--color-text-headline);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.hero-title {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 4rem;
+  }
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  margin-bottom: 2rem;
+  color: var(--color-text-paragraph);
+}
+
+@media (min-width: 768px) {
+  .hero-subtitle {
+    font-size: 2rem;
+  }
+}
+
+.cta-button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+
+  /* 使用主题色 */
+  background-color: var(--color-primary);
+  color: var(--color-primary-contrast);
+
+  /* 半透明效果可以去掉，也可以在其他按钮上使用 */
+  /* background-color: rgba(255, 255, 255, 0.2); */
+  /* backdrop-filter: blur(4px); */
+
+  /* 过渡 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Ensure button pulse animation from Framer Motion works smoothly */
+.cta-button:focus {
+  outline: none;
+}

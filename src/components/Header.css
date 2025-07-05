@@ -1,0 +1,104 @@
+/* src/components/Header.css */
+
+/* ——————— 基础 Sticky Header ——————— */
+.site-header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* — 默认状态 — */
+/* Bright 主题下默认半透明浅色背景，文字用深色 */
+.site-header.bright {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.site-header.bright .logo,
+.site-header.bright .nav-links a,
+.site-header.bright .theme-toggle {
+  color: var(--color-primary-contrast); /* 深色文字 */
+}
+
+/* Dark 主题下默认半透明深色背景，文字用白色 */
+.site-header.dark {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.site-header.dark .logo,
+.site-header.dark .nav-links a,
+.site-header.dark .theme-toggle {
+  color: var(--color-text-headline); /* 白色文字 */
+}
+
+/* — 滚动后状态 — */
+/* Bright 主题滚动后：深色背景、白色文字 */
+.site-header.bright.scrolled {
+  background-color: rgba(0, 70, 67, 0.85);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+.site-header.bright.scrolled .logo,
+.site-header.bright.scrolled .nav-links a,
+.site-header.bright.scrolled .theme-toggle {
+  color: var(--color-text-headline);
+}
+
+/* Dark 主题滚动后：更深背景、保持白色文字 */
+.site-header.dark.scrolled {
+  background-color: rgba(22, 22, 26, 0.85);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+.site-header.dark.scrolled .logo,
+.site-header.dark.scrolled .nav-links a,
+.site-header.dark.scrolled .theme-toggle {
+  color: var(--color-text-headline);
+}
+
+/* ——————— 内部布局 ——————— */
+/* 容器 */
+.site-header .container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.5rem;
+}
+
+/* Logo */
+.site-header .logo {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/* 导航链接 */
+.site-header .nav-links a {
+  margin: 0 0.75rem;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.site-header .nav-links a:hover {
+  color: var(--color-primary);
+}
+
+/* 主题切换按钮 */
+.site-header .theme-toggle {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+  backdrop-filter: blur(10px);
+}
+.site-header.bright .theme-toggle {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.site-header.dark .theme-toggle {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.site-header .theme-toggle:hover {
+  transform: scale(1.05);
+}
