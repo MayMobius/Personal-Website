@@ -1,0 +1,74 @@
+/* src/components/Education.css */
+
+.education-section {
+  padding: 4rem 1rem;
+  background-color: var(--ill-secondary); /* 使用配色变量 */
+  color: var(--color-text-paragraph);
+}
+
+.education-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--color-text-headline);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.education-list {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.education-item {
+  background-color: var(--color-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-family: 'Montserrat', sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.edu-degree {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-text-headline);
+  margin-bottom: 0.25rem;
+}
+
+.edu-institution {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.edu-period {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--color-text-paragraph);
+  margin-bottom: 1rem;
+}
+
+.edu-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-text-paragraph);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .education-list {
+    gap: 1rem;
+  }
+  .education-item {
+    padding: 1rem;
+  }
+}

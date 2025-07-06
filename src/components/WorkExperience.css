@@ -1,0 +1,109 @@
+/* src/components/WorkExperience.css */
+
+/* 给 Section 加一些内边距，与其它区块统一 */
+.work-experience {
+  padding: 4rem 1rem;
+  background-color: var(--ill-secondary);
+    /* 固定为一屏高度 */
+  height: 100vh;
+
+  /* 如果你不想让 section 本身上下滚动，把 overflow 隐藏 */
+  overflow: hidden;
+}
+
+/* exp-content 限制最大宽度并水平居中 */
+.exp-content {
+  display: flex;
+  max-width: 1200px;     /* 和其它区块保持一致 */
+  margin: 0 auto;        /* 水平居中 */
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* 左侧标题保持 40% 宽度 */
+.exp-header {
+  flex: 0 0 40%;
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
+  padding: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--color-text-headline);
+}
+
+/* 右侧滑片容器 */
+.exp-slides {
+  flex: 1;
+  height: 100%;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.exp-slides::-webkit-scrollbar {
+  display: none;
+}
+
+/* 每个 slide 占满一屏 */
+.exp-slide {
+  flex: 0 0 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 2rem;
+}
+
+/* 卡片：宽度占右侧的 60%，并增大上下间距 */
+.exp-block {
+  max-width: 90%;
+  width: 100%;
+  background-color: var(--ill-main);
+  padding: 1.5rem;
+  margin: 0 0 3rem;    /* 底部多出 3rem 空间 */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-family: 'Montserrat', sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.exp-block:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* 内部文字样式 */
+.exp-role { /* ... */ }
+.exp-company { /* ... */ }
+.exp-period { /* ... */ }
+.exp-desc { /* ... */ }
+
+/* 移动端：取消粘性，垂直堆叠 */
+@media (max-width: 768px) {
+  .exp-content {
+    flex-direction: column;
+    height: auto;
+  }
+  .exp-header {
+    position: static;
+    width: auto;
+    text-align: center;
+    font-size: 3rem;
+  }
+  .exp-slides {
+    height: auto;
+    overflow: visible;
+    scroll-snap-type: none;
+  }
+  .exp-slide {
+    flex: none;
+    height: auto;
+    padding: 2rem 1rem;
+  }
+  .exp-block {
+    max-width: none;
+    margin: 0 auto 3rem;
+  }
+}

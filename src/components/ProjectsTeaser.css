@@ -24,7 +24,7 @@
 .project-card {
   display: flex;
   flex-direction: column;
-  background-color: var(--ill-main);
+  background-color: var(--ill-secondary);
   border-radius: 8px;
   overflow: hidden;
   text-decoration: none;
@@ -50,11 +50,11 @@
 .card-content h3 {
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
-  color: var(--color-text-headline);
+  color: var(--color-primary-contrast);
 }
 
 .card-content p {
   font-size: 0.95rem;
   line-height: 1.4;
-  color: var(--color-text-paragraph);
+  color: var(--color-primary-contrast);
 }
