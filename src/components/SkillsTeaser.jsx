@@ -1,74 +1,113 @@
-import React, { useRef, useEffect } from 'react';
-import { motion, useAnimation, useInView } from 'framer-motion';
+// src/components/SkillsTeaser.jsx
+
+import React from 'react';
+import { motion } from 'framer-motion';
+import {
+  SiPython,
+  SiNumpy,
+  SiPandas,
+  SiScikitlearn,
+  SiJavascript,
+  SiTypescript,
+  SiCplusplus,
+  SiReact,
+  SiNextdotjs,
+  SiRedux,
+  SiHtml5,
+  SiCss3,
+  SiNodedotjs,
+  SiExpress,
+  SiMysql,
+  SiMongodb,
+  SiTensorflow,
+  SiPytorch,
+  SiKeras,
+  SiOpencv,
+  SiDocker,
+  SiAmazonwebservices,
+  SiGit,
+  SiGithubactions,
+  SiJenkins,
+  SiBlender
+} from 'react-icons/si';
+import { VscAzure } from "react-icons/vsc";
+import { GrVmMaintenance } from "react-icons/gr";
+import { FaTools, FaNetworkWired } from 'react-icons/fa';
 import './SkillsTeaser.css';
 
 const skills = [
-  { name: 'HTML', level: 90 },
-  { name: 'CSS', level: 85 },
-  { name: 'JavaScript', level: 80 },
-  { name: 'React', level: 75 },
-  { name: 'Tailwind CSS', level: 70 },
+  { icon: <SiPython />,           name: 'Python' },
+  { icon: <SiNumpy />,            name: 'Numpy'},
+  { icon: <SiPandas />,           name: 'Pandas'},
+  { icon: <SiScikitlearn />,      name: 'Scikitlearn'},
+  { icon: <SiTypescript />,       name: 'Typescript'},
+  { icon: <SiJavascript />,       name: 'JavaScript' },
+  { icon: <SiCplusplus />,        name: 'C / C++' },
+  { icon: <SiReact />,            name: 'React.js' },
+  { icon: <SiNextdotjs />,        name: 'Next.js' },
+  { icon: <SiRedux />,            name: 'Redux' },
+  { icon: <SiHtml5 />,            name: 'HTML5' },
+  { icon: <SiCss3 />,             name: 'CSS3 (Sass/SCSS)' },
+  { icon: <SiNodedotjs />,        name: 'Node.js' },
+  { icon: <SiExpress />,          name: 'Express.js' },
+  { icon: <SiMysql />,            name: 'MySQL' },
+  { icon: <SiMongodb />,          name: 'MongoDB' },
+  { icon: <SiTensorflow />,       name: 'TensorFlow' },
+  { icon: <SiPytorch />,          name: 'PyTorch' },
+  { icon: <SiKeras />,            name: 'Keras' },
+  { icon: <SiOpencv />,           name: 'OpenCV' },
+  { icon: <FaTools />,            name: 'ResNet' },
+  { icon: <SiDocker />,           name: 'Docker' },
+  { icon: <SiAmazonwebservices />,name: 'AWS (EC2, S3)' },
+  { icon: <VscAzure />,           name: 'Azure' },
+  { icon: <SiGit />,              name: 'Git' },
+  { icon: <SiGithubactions />,    name: 'GitHub Actions' },
+  { icon: <SiJenkins />,          name: 'Jenkins' },
+  { icon: <GrVmMaintenance />,    name: 'Maintenance' },
+  { icon: <FaNetworkWired />,     name: 'Network Monitoring'},
+  { icon: <SiBlender />,          name: 'Blender' }
+
 ];
 
+const container = {
+  hidden: {},
+  show: {
+    transition: { staggerChildren: 0.12 }
+  }
+};
+
+const item = {
+  hidden: { opacity: 0, y: 20, scale: 0.9 },
+  show:   { opacity: 1, y: 0, scale: 1, transition: { type: 'spring', stiffness: 120 } }
+};
+
 export default function SkillsTeaser() {
-  const ref = useRef(null);
-  const inView = useInView(ref, { amount: 0.3 });
-  const controls = useAnimation();
-  const isFirst = useRef(true);
-
-  useEffect(() => {
-    if (isFirst.current) {
-        isFirst.current = false;
-        return;
-    }
-    if (inView) controls.start('visible');
-    else controls.start('hidden');
-  }, [inView, controls]);
-
-  // 定义标题与进度条的统一variants
-  const fadeUp = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } }
-  };
-
   return (
-    <section id="skills" className="skills-teaser" ref={ref}>
+    <section id="skills" className="skills-teaser">
       <motion.h2
-        variants={fadeUp}
-        initial="hidden"
-        animate={controls}
+        className="skills-title"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: false, amount: 0.3 }}
       >
-        技能概览
+        Skills
       </motion.h2>
-      <div className="skills-list">
-        {skills.map((skill, idx) => (
-          <div key={skill.name} className="skill-item">
-            <span className="skill-name">{skill.name}</span>
-            <div className="skill-bar-bg">
-              <motion.div
-                className="skill-bar"
-                initial={{ width: 0 }}
-                animate={controls}
-                variants={{
-                  hidden: { width: 0 },
-                  visible: {
-                    width: `${skill.level}%`,
-                    transition: { duration: 0.8, ease: 'easeOut', delay: idx * 0.1 }
-                  }
-                }}
-              />
-            </div>
-            <motion.span
-              className="skill-level"
-              variants={fadeUp}
-              initial="hidden"
-              animate={controls}
-            >
-              {skill.level}%
-            </motion.span>
-          </div>
+
+      <motion.div
+        className="skills-grid"
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.2 }}
+      >
+        {skills.map((s, i) => (
+          <motion.div key={i} className="skill-card" variants={item}>
+            <div className="skill-icon">{s.icon}</div>
+            <div className="skill-name">{s.name}</div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }

@@ -7,17 +7,17 @@ import './Education.css';
 const educations = [
   {
     id: 1,
-    institution: 'University of Wonderland',
-    degree: 'Master of Science in Computer Science',
-    period: '2022 – 2024',
-    description: '专注于人机交互与前沿 Web 技术，发表了两篇关于可访问性和动画性能的论文。'
-  },
+    institution: 'Lakehead University',
+    degree: 'Bachelor of Arts & Science in Computer Science',
+    period: '2023 – 2024',
+    description: 'Major Courses: Big Data, Computer Vision & Image Analysis, Pattern Recognition, Data Science, AI for Autonomous Systems, Mobile Programming, etc.'
+},
   {
     id: 2,
-    institution: 'Example Tech Institute',
-    degree: 'Bachelor of Engineering in Software Engineering',
-    period: '2018 – 2022',
-    description: '主修软件架构与算法，担任校编程俱乐部副主席，组织多场黑客马拉松。'
+    institution: 'University of Wisconsin-Eau Claire',
+    degree: 'Master of Science in Computer Science',
+    period: '2020 – 2022',
+    description: 'Major Courses: Linear Algebra, Computer Programming-C Language, Data Structures & Algorithms, Digital Logic & Systems, Operating System, etc.'
   }
 ];
 
@@ -28,10 +28,10 @@ export default function Education() {
         className="education-title"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: false, amount: 0.3 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
       >
-        教育经历
+        Education
       </motion.h2>
 
       <div className="education-list">
@@ -41,7 +41,7 @@ export default function Education() {
             className="education-item"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: false, amount: 0.3 }}
             transition={{ duration: 0.6, ease: 'easeOut', delay: edu.id * 0.1 }}
           >
             <h3 className="edu-degree">{edu.degree}</h3>

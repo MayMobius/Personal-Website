@@ -61,11 +61,11 @@ export default function HeroSection() {
           className="cta-button"
           onClick={() =>
             document
-              .getElementById('projects')
+              .getElementById('experience')
               .scrollIntoView({ behavior: 'smooth' })
           }
         >
-          查看作品
+          See my Experience
         </motion.button>
       </motion.div>
     </section>

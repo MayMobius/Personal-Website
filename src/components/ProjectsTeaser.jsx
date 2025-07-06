@@ -22,6 +22,12 @@ const projects = [
     description: 'Canvas 动画与数据可视化结合的小游戏。',
     image: '/path/to/projectC.jpg',
     link: '#'
+  },
+    {
+    title: '项目 C',
+    description: 'Canvas 动画与数据可视化结合的小游戏。',
+    image: '/path/to/projectC.jpg',
+    link: '#'
   }
 ];
 
@@ -53,7 +59,7 @@ export default function ProjectsTeaser() {
         transition={{ duration: 0.6, ease: 'easeOut' }}
         viewport={{ amount: 0.3 }}
       >
-        作品展示
+        Projects Experience
       </motion.h2>
       <motion.div
         className="projects-grid"

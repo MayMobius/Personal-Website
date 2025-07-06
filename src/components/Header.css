@@ -2,7 +2,7 @@
 
 /* ——————— 基础 Sticky Header ——————— */
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
@@ -10,6 +10,9 @@
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+main {
+  padding-top: 3.8rem; /* 留出header的空间 */
+}
 /* — 默认状态 — */
 /* Bright 主题下默认半透明浅色背景，文字用深色 */
 .site-header.bright {

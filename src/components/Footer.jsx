@@ -5,13 +5,14 @@ import './Footer.css';
 
 export default function Footer() {
   return (
+    <section id="contact" className="contact">
     <footer className="site-footer">
       <div className="footer-container">
         <span className="footer-text">
           © {new Date().getFullYear()} May Liu. All rights reserved.
         </span>
         <div className="footer-links">
-          <a href="mailto:your.email@example.com">Email</a>
+          <a href="mailto:maymobius23@gmail.com">Email</a>
           <a
             href="https://github.com/your-github-username"
             target="_blank"
@@ -20,7 +21,7 @@ export default function Footer() {
             GitHub
           </a>
           <a
-            href="https://linkedin.com/in/your-linkedin-id"
+            href="https://www.linkedin.com/in/yiming-may-liu-63083a316"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -29,5 +30,6 @@ export default function Footer() {
         </div>
       </div>
     </footer>
+    </section>
   );
 }

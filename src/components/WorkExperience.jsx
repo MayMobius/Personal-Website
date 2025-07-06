@@ -6,11 +6,11 @@ import './WorkExperience.css';
 const experiences = [
   {
     id: 1,
-    role: '前端工程师',
-    company: '公司 A',
-    period: '2023.01 – 2024.03',
+    role: 'AI Data Annotation',
+    company: 'Outlier&CrowdGen&Appen',
+    period: '2024.05 – 2025.03',
     description:
-      '负责公司官网与后台管理系统的开发与维护，使用 React 和 TypeScript 优化页面性能。'
+      '• Led annotation and preprocessing pipelines for LLM, computer vision, and speech recognition projects using Python, TensorFlow, and PyTorch. • Developed and executed data augmentation strategies (e.g., rotation, noise injection) to produce balanced, high-quality datasets. • Orchestrated CI/CD-driven deployments on AWS and Azure for scalable, low-latency inference.'
   },
   {
     id: 2,
