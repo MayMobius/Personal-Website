@@ -16,8 +16,10 @@ function App() {
         <HeroSection />
         <AboutTeaser />
         <SkillsTeaser />
+        <ProjectsTeaser />
         {/* 后续会加 AboutTeaser、SkillsTeaser 等 */}
       </main>
+      <Footer />
     </>
   );
 }
