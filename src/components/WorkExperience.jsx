@@ -6,28 +6,42 @@ import './WorkExperience.css';
 const experiences = [
   {
     id: 1,
-    role: 'AI Data Annotation',
+    role: 'AI Data Annotation (pt)',
     company: 'Outlier&CrowdGen&Appen',
     period: '2024.05 – 2025.03',
-    description:
-      '• Led annotation and preprocessing pipelines for LLM, computer vision, and speech recognition projects using Python, TensorFlow, and PyTorch. • Developed and executed data augmentation strategies (e.g., rotation, noise injection) to produce balanced, high-quality datasets. • Orchestrated CI/CD-driven deployments on AWS and Azure for scalable, low-latency inference.'
+        description: (
+      <>
+        <p> <b>•</b> Led annotation and preprocessing pipelines for LLM, computer vision, and speech recognition projects using Python, TensorFlow, and PyTorch.</p>
+        <p> <b>•</b> Developed and executed data augmentation strategies (e.g., rotation, noise injection) to produce balanced, high-quality datasets.</p>
+        <p> <b>•</b> Orchestrated CI/CD-driven deployments on AWS and Azure for scalable, low-latency inference.</p>
+      </>
+    )
   },
   {
     id: 2,
-    role: '交互设计师',
-    company: '公司 B',
-    period: '2021.06 – 2022.12',
+    role: 'Global Content & Localization Strategist',
+    company: 'miHoYo Co., Ltd.',
+    period: '2023.01 – 2023.06',
     description:
-      '基于 Figma 与 Framer Motion，设计并实现多款交互动效，提升用户体验。'
-  },
+      <>
+        <p> <b>•</b> Managed global partnerships with content creators to expand community reach, collaborating with marketing teams to localize content for multiple regions.</p>
+        <p> <b>•</b> Oversaw submission reviews and brand consistency checks for overseas markets, ensuring alignment with company guidelines.</p>
+        <p> <b>•</b> Led global marketing campaigns and community events, implementing data-driven strategies to increase user engagement by 20%.</p>
+        <p> <b>•</b> Coordinated distribution of merchandise and in-game items, analyzing sales and engagement metrics to optimize future campaigns.</p>
+      </>  },
   {
     id: 3,
-    role: 'Web 开发实习生',
-    company: '公司 C',
-    period: '2020.07 – 2021.05',
+    role: 'IT Network Monitoring & Maintenance Specialist',
+    company: 'Hainan Walsoon New Material Technology Co., Ltd.',
+    period: '2022.06 – 2022.12',
     description:
-      '参与多个项目的前端开发，以 HTML/CSS/JavaScript 完成页面切图与可视化模块。'
-  }
+      <>
+        <p> <b>•</b> Monitored internal LAN, WAN, and VPN health using SNMP-based tools and network analyzers to ensure 24/7 availability.</p>
+        <p> <b>•</b> Managed configuration, firmware updates, and patching for core network devices (routers, switches, firewalls).</p>
+        <p> <b>•</b> Diagnosed and resolved connectivity and performance issues, minimizing downtime and meeting SLA targets.</p>
+        <p> <b>•</b> Implemented network security policies—including access controls and intrusion detection—and conducted regular vulnerability assessments.</p>
+        <p> <b>•</b> Maintained accurate network documentation: topology diagrams, device inventories, and standard operating procedures</p>
+      </>  }
 ];
 
 export default function WorkExperience() {

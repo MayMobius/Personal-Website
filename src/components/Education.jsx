@@ -8,14 +8,14 @@ const educations = [
   {
     id: 1,
     institution: 'Lakehead University',
-    degree: 'Bachelor of Arts & Science in Computer Science',
+    degree: 'Master of Science in Computer Science',
     period: '2023 – 2024',
     description: 'Major Courses: Big Data, Computer Vision & Image Analysis, Pattern Recognition, Data Science, AI for Autonomous Systems, Mobile Programming, etc.'
 },
   {
     id: 2,
     institution: 'University of Wisconsin-Eau Claire',
-    degree: 'Master of Science in Computer Science',
+    degree: 'Bachelor of Arts & Science in Computer Science',
     period: '2020 – 2022',
     description: 'Major Courses: Linear Algebra, Computer Programming-C Language, Data Structures & Algorithms, Digital Logic & Systems, Operating System, etc.'
   }

@@ -50,7 +50,7 @@ export default function HeroSection() {
           animate={showExtras ? 'visible' : 'hidden'}
           className="hero-subtitle"
         >
-          Front-End Dev · Web Desgine · LLM Engeering
+          Front-End · Web Desgine · LLM/AI Engineering
         </motion.h2>
 
         {/* CTA 按钮，同样滚动后再显示 */}
