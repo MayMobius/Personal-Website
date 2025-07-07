@@ -42,7 +42,7 @@ export default function AboutTeaser() {
       <div className="about-teaser-content">
         <motion.img
           className="about-avatar"
-          src="/images/self.jpg"
+          src={`${process.env.PUBLIC_URL}/images/self.jpg`}
           alt="Avatar"
           variants={slideInLeft}
           initial="hidden"
