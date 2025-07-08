@@ -77,6 +77,7 @@ main {
 
 /* 导航链接 */
 .site-header .nav-links a {
+  margin-left: auto;
   margin: 0 0.75rem;
   font-size: 1rem;
   text-decoration: none;
@@ -88,6 +89,9 @@ main {
 
 /* 主题切换按钮 */
 .site-header .theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 12px;
@@ -95,6 +99,8 @@ main {
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s;
   backdrop-filter: blur(10px);
+  flex-shrink: 0;       /* 不被 flex 容器压缩 */
+  white-space: nowrap;
 }
 .site-header.bright .theme-toggle {
   background-color: rgba(255, 255, 255, 0.3);
@@ -104,4 +110,76 @@ main {
 }
 .site-header .theme-toggle:hover {
   transform: scale(1.05);
+}
+
+
+/* 汉堡图标，默认隐藏 */
+.mobile-menu-icon {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: inherit; /* 跟随主题文字色 */
+}
+
+/* 移动端（≤768px） 折叠导航 & 汉堡图标可见 */
+@media (max-width: 768px) {
+  
+  /* 显示汉堡按钮 */
+  .mobile-menu-icon {
+    display: block;
+  }
+
+  /* ——————— 移动端折叠导航 ——————— */
+/* —— 针对移动端：宽度小于 768px —— */
+@media (max-width: 768px) {
+  /* 隐藏原来的横排 nav，显示“汉堡”图标（假设你已经有切换 open 类的逻辑） */
+  .site-header .nav-links {
+    position: absolute;
+    top: 100%;               /* Header 正好下面 */
+    left: 50%;               /* 水平居中 */
+    transform: translateX(-50%);
+    width: 90%;              /* 留一点边距 */
+    max-width: 360px;
+    background-color: color-mix(in srgb, var(--ill-secondary) 98%, transparent); /* 次级背景色 */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: visibility 0s linear 0.3s, opacity 0.3s ease;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1001;           /* 确保在 header 之上，但不会盖住 header 自身 */
+  }
+  .site-header .nav-links.open {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s;
+  }
+
+  /* 每个链接垂直排列并加大触控面积 */
+  .site-header .nav-links a {
+    margin: 0.75rem 0;
+    font-size: 1.1rem;
+  }
+
+    .site-header .mobile-menu-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1002; /* 确保在 nav-links 和 theme-toggle 之上 */
+  }
+
+  .site-header .theme-toggle .tt-label {
+    display: none;
+  }
+
+  /* 2. 保持主题切换按钮在 header 右侧，不要放进菜单 */
+ .site-header .theme-toggle {
+    order: 2;     /* 把按钮推到最右 */
+    margin-right: 2.5rem;
+  }
+}
 }
