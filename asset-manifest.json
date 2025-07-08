@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Personal-Website/static/css/main.0b62d183.css",
-    "main.js": "/Personal-Website/static/js/main.71f8a084.js",
-    "index.html": "/Personal-Website/index.html",
-    "main.0b62d183.css.map": "/Personal-Website/static/css/main.0b62d183.css.map",
-    "main.71f8a084.js.map": "/Personal-Website/static/js/main.71f8a084.js.map"
+    "main.css": "https://may-liu.com/static/css/main.e803d919.css",
+    "main.js": "https://may-liu.com/static/js/main.15ac820d.js",
+    "index.html": "https://may-liu.com/index.html",
+    "main.e803d919.css.map": "https://may-liu.com/static/css/main.e803d919.css.map",
+    "main.15ac820d.js.map": "https://may-liu.com/static/js/main.15ac820d.js.map"
   },
   "entrypoints": [
-    "static/css/main.0b62d183.css",
-    "static/js/main.71f8a084.js"
+    "static/css/main.e803d919.css",
+    "static/js/main.15ac820d.js"
   ]
 }
