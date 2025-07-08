@@ -82,15 +82,23 @@
 
 /* 移动端：取消粘性，垂直堆叠 */
 @media (max-width: 768px) {
+    .work-experience {
+    /* 彻底取消一屏高度限制 */
+    height: auto !important;
+    /* 把 overflow:hidden 还原成默认的 visible */
+    overflow: visible !important;
+  }
   .exp-content {
     flex-direction: column;
     height: auto;
   }
   .exp-header {
-    position: static;
-    width: auto;
-    text-align: center;
-    font-size: 3rem;
+    position: static;      /* 取消 sticky */
+    width: 100%;           /* 占满全宽 */
+    margin: 0 auto;        /* 水平居中 */
+    text-align: center;    /* 文本居中 */
+    font-size: 3rem;       /* 你原来的字号 */
+    padding: 2rem 1rem;    /* 让左右也有点内边距 */
   }
   .exp-slides {
     height: auto;
