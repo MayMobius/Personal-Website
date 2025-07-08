@@ -24,13 +24,13 @@
 
 .footer-text {
   font-size: 0.9rem;
-  color: var(--color-text-paragraph);
+  color: var(--color-primary);
 }
 
 .footer-links a {
   margin: 0 0.5rem;
   font-size: 0.9rem;
-  color: var(--color-text-paragraph);
+  color: var(--color-primary);
   text-decoration: none;
   transition: color 0.2s ease;
 }

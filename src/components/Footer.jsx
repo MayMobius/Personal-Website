@@ -14,7 +14,7 @@ export default function Footer() {
         <div className="footer-links">
           <a href="mailto:maymobius23@gmail.com">Email</a>
           <a
-            href="https://github.com/your-github-username"
+            href="https://github.com/MayMobius"
             target="_blank"
             rel="noopener noreferrer"
           >
