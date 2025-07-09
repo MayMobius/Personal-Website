@@ -23,12 +23,23 @@
 }
 
 .education-item {
+  position: relative;
   background-color: var(--color-bg);
   padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   font-family: 'Montserrat', sans-serif;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.edu-logo {
+  position: absolute;
+  border-radius: 8px;
+  top: 1rem;         /* 距离卡片顶部 */
+  right: 3rem;       /* 距离卡片右侧 */
+  width: 100px;       /* 你可以根据需要调大小 */
+  height: auto;
+  object-fit: contain;
 }
 
 .education-item:hover {

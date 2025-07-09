@@ -8,6 +8,7 @@ const educations = [
   {
     id: 1,
     institution: 'Lakehead University',
+    logo: '/images/LU_logo.png',
     degree: 'Master of Science in Computer Science',
     period: '2023 – 2024',
     description: 'Major Courses: Big Data, Computer Vision & Image Analysis, Pattern Recognition, Data Science, AI for Autonomous Systems, Mobile Programming, etc.'
@@ -15,6 +16,7 @@ const educations = [
   {
     id: 2,
     institution: 'University of Wisconsin-Eau Claire',
+    logo: '/images/uwec_logo.png',
     degree: 'Bachelor of Arts & Science in Computer Science',
     period: '2020 – 2022',
     description: 'Major Courses: Linear Algebra, Computer Programming-C Language, Data Structures & Algorithms, Digital Logic & Systems, Operating System, etc.'
@@ -44,6 +46,11 @@ export default function Education() {
             viewport={{ once: false, amount: 0.3 }}
             transition={{ duration: 0.6, ease: 'easeOut', delay: edu.id * 0.1 }}
           >
+            <img
+              src={edu.logo}
+              alt={`${edu.institution} logo`}
+              className="edu-logo"
+            />
             <h3 className="edu-degree">{edu.degree}</h3>
             <h4 className="edu-institution">{edu.institution}</h4>
             <span className="edu-period">{edu.period}</span>
