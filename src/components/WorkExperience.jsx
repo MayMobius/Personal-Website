@@ -11,29 +11,17 @@ const experiences = [
     period: '2024.05 – 2025.03',
         description: (
       <>
-        <p> <b>•</b> Led annotation and preprocessing pipelines for LLM, computer vision, and speech recognition projects using Python, TensorFlow, and PyTorch.</p>
-        <p> <b>•</b> Developed and executed data augmentation strategies (e.g., rotation, noise injection) to produce balanced, high-quality datasets.</p>
-        <p> <b>•</b> Orchestrated CI/CD-driven deployments on AWS and Azure for scalable, low-latency inference.</p>
+        <p> <b>•</b> Participated in training a wide range of AI models, including Large Language Models (LLMs), image recognition, and speech recognition systems.</p>
+        <p> <b>•</b> Collaborated with ML engineers to integrate labeled datasets into training pipelines, providing feedback on data quality and format requirements.</p>
+        <p> <b>•</b> Conducted rigorous quality assurance, identifying and correcting annotation errors to maintain more than 98% labeling accuracy.</p>
       </>
     )
   },
   {
     id: 2,
-    role: 'Global Content & Localization Strategist',
-    company: 'miHoYo Co., Ltd.',
-    period: '2023.01 – 2023.06',
-    description:
-      <>
-        <p> <b>•</b> Managed global partnerships with content creators to expand community reach, collaborating with marketing teams to localize content for multiple regions.</p>
-        <p> <b>•</b> Oversaw submission reviews and brand consistency checks for overseas markets, ensuring alignment with company guidelines.</p>
-        <p> <b>•</b> Led global marketing campaigns and community events, implementing data-driven strategies to increase user engagement by 20%.</p>
-        <p> <b>•</b> Coordinated distribution of merchandise and in-game items, analyzing sales and engagement metrics to optimize future campaigns.</p>
-      </>  },
-  {
-    id: 3,
     role: 'IT Network Monitoring & Maintenance Specialist',
     company: 'Hainan Walsoon New Material Technology Co., Ltd.',
-    period: '2022.06 – 2022.12',
+    period: '2022.06 – 2023.06',
     description:
       <>
         <p> <b>•</b> Monitored internal LAN, WAN, and VPN health using SNMP-based tools and network analyzers to ensure 24/7 availability.</p>
